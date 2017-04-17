@@ -11,6 +11,7 @@ isalnum()
 isalpha()
 isdigit()
 isprint()
+isspace()
 memchr()
 memcmp()
 memcpy()
@@ -34,6 +35,7 @@ Additional ~nix and other functions (due to project subject):
 bzero()
 isascii()
 itoa()
+itoa_base ()
 lstadd() - linked list - add node function.
 lstdel() - linked list - delete list function.
 lstdelone() - linked list - delete node function.
@@ -72,3 +74,4 @@ ft_binary_search() - realization of binary search algorithm.
 ft_quicksort() - realization of quick sort algorithm.
 ft_sqrt() - custom realization of sqrt function.
 ft_str_word_ctr() - this function counts "words" in str pointer delimited with specified character.
+ft_swap - function to swap two values by pointers using memcpy.
