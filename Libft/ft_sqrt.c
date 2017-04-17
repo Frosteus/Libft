@@ -14,11 +14,11 @@
 
 float	ft_sqrt(const float f)
 {
-	t_value s_sqrt;
+	union u_u sqrt;
 
-	s_sqrt.u.f = f;
-	s_sqrt.u.i = (1 << 29) + (s_sqrt.u.i >> 1) - (1 << 22);
-	s_sqrt.u.f = s_sqrt.u.f + f / s_sqrt.u.f;
-	s_sqrt.u.f = 0.25f * s_sqrt.u.f + f / s_sqrt.u.f;
-	return (s_sqrt.u.f);
+	sqrt.f = f;
+	sqrt.i = (1 << 29) + (sqrt.i >> 1) - (1 << 22);
+	sqrt.f = sqrt.f + f / sqrt.f;
+	sqrt.f = 0.25f * sqrt.f + f / sqrt.f;
+	return (sqrt.f);
 }

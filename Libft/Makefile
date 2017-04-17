@@ -29,7 +29,7 @@ SOURCE = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
 	ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_binary_search.c ft_sqrt.c \
 	ft_strrev.c ft_str_word_ctr.c ft_quicksort.c ft_get_line.c ft_abs.c \
-	ft_fabs.c
+	ft_fabs.c ft_swap.c ft_itoa_base.c ft_isspace.c
 
 OBJECT = $(SOURCE:.c=.o)
 
