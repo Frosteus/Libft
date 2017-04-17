@@ -74,4 +74,4 @@ ft_binary_search() - realization of binary search algorithm.
 ft_quicksort() - realization of quick sort algorithm.
 ft_sqrt() - custom realization of sqrt function.
 ft_str_word_ctr() - this function counts "words" in str pointer delimited with specified character.
-ft_swap - function to swap two values by pointers using memcpy.
+ft_swap() - function to swap two values by pointers using memcpy.
