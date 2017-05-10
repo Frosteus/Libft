@@ -4,8 +4,8 @@ This library includes custom realization of standart functions. Also it includes
 Use "make" command to compile library. Makefile contains make, clean, fclean commands.  
 libft.h includes all necessary structures and all function prototypes.  
   
-Standart C library functions:  
-abs() and fabs()  
+# Standart C library functions:  
+abs() and fabs()  
 atoi()  
 isalnum()  
 isalpha()  
@@ -33,7 +33,7 @@ strtol()
 tolower()  
 toupper()  
   
-Additional ~nix and other functions (due to project subject):  
+# Additional ~nix and other functions (due to project subject):  
 bzero()  
 isascii()  
 itoa()  
@@ -71,7 +71,7 @@ strsplit()
 strsub()  
 strtrim()  
   
-Custom functions and algorithms:  
+# Custom functions and algorithms:  
 ft_binary_search() - realization of binary search algorithm.  
 ft_quicksort() - realization of quick sort algorithm.  
 ft_sqrt() - custom realization of sqrt function.  
