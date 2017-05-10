@@ -3,8 +3,8 @@ Library which I made as part of a learning process in UNIT Factory.
 This library includes custom realization of standart functions. Also it includes other useful functions and algorithms for projects.  
 Use "make" command to compile library. Makefile contains make, clean, fclean commands.  
 libft.h includes all necessary structures and all function prototypes.  
-  
-Standart C library functions:  
+  
+Standart C library functions:  
 abs() and fabs()  
 atoi()  
 isalnum()  
@@ -32,9 +32,9 @@ strstr()
 strtol()  
 tolower()  
 toupper()  
-  
-Additional ~nix and other functions (due to project subject):  
-bzero()  
+  
+Additional ~nix and other functions (due to project subject):  
+bzero()  
 isascii()  
 itoa()  
 itoa_base ()  
@@ -70,8 +70,8 @@ strrev()
 strsplit()  
 strsub()  
 strtrim()  
-  
-Custom functions and algorithms:  
+  
+Custom functions and algorithms:  
 ft_binary_search() - realization of binary search algorithm.  
 ft_quicksort() - realization of quick sort algorithm.  
 ft_sqrt() - custom realization of sqrt function.  
