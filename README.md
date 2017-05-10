@@ -1,8 +1,8 @@
-# Libft
-Library which I made as part of a learning process in UNIT Factory.
-This library includes custom realization of standart functions. Also it includes other useful functions and algorithms for projects. 
-Use "make" command to compile library. Makefile contains make, clean, fclean commands.
-libft.h includes all necessary structures and all function prototypes.
+# Libft  
+Library which I made as part of a learning process in UNIT Factory.  
+This library includes custom realization of standart functions. Also it includes other useful functions and algorithms for projects.  
+Use "make" command to compile library. Makefile contains make, clean, fclean commands.  
+libft.h includes all necessary structures and all function prototypes.  
 
 Standart C library functions:
 abs() and fabs()
