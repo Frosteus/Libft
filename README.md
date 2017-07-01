@@ -5,7 +5,7 @@ Use "make" command to compile library. Makefile contains make, clean, fclean com
 libft.h includes all necessary structures and all function prototypes.  
   
 # Standart C library functions:  
-abs() and fabs()   
+abs() and fabs()  
 atoi()  
 isalnum()  
 isalpha()  
