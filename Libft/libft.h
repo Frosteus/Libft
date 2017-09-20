@@ -116,6 +116,6 @@ int		ft_get_line(const int fd, char **line);
 void	ft_swap(void *a, void *b, size_t size);
 int		ft_abs(int n);
 double	ft_fabs(double n);
-char	*ft_itoa_base(int value, int base);
+char	*ft_itoa_base(int value, char *str, int base)
 int		ft_isspace(char c);
 #endif
