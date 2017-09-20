@@ -27,11 +27,10 @@ static int	ft_count_nums(unsigned int n, int base)
 	return (i);
 }
 
-char		*ft_itoa_base(int value, int base)
+char		*ft_itoa_base(int value, char *str, int base)
 {
 	unsigned int	n;
 	int				sign;
-	char			*str;
 	int				len;
 
 	sign = 0;
@@ -41,8 +40,6 @@ char		*ft_itoa_base(int value, int base)
 		sign = 1;
 	n = (value < 0 ? (unsigned int)-value : (unsigned int)value);
 	len = ft_count_nums(n, base) + sign;
-	if ((str = malloc(sizeof(char) * (len + 1))) == NULL)
-		return (NULL);
 	str[len] = '\0';
 	while (len > 0)
 	{
