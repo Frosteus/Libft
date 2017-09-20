@@ -10,20 +10,26 @@
 #                                                                              #
 # **************************************************************************** #
 
-#--Colors tags
+#Colors tags
 GREENTAG:="\033[1;32m"
 YELLOWTAG:="\033[1;33m"
 CENDTAG:="\033[0;0m"
-#------------
+#-----------
 
+#Binary name
 NAME = libft.a
+#Compiler
 CC = gcc
+#Compiler flags
 CFLAGS = -Wall -Wextra -Werror
 LDFLAGS = rcs
+
+#Project structure directories
 IDIR = include
 ODIR = obj
 SDIR = src
 
+#All project sources list (norminette demand)
 SRCS = ft_memset.c \
 	ft_bzero.c \
 	ft_memcpy.c \
@@ -93,30 +99,42 @@ SRCS = ft_memset.c \
 	ft_swap.c \
 	ft_itoa_base.c \
 	ft_isspace.c
-
+#Creating objects path
 OBJS := $(patsubst %.c,$(ODIR)/%.o,$(SRCS))
 
+#Compiling object files
 $(ODIR)/%.o:$(SDIR)/%.c
 	@echo $(YELLOWTAG)"|\c"
 	@$(CC) $(CFLAGS) -I $(IDIR) -c $< -o $@
 
+#Linking binary, adding libs etc.
 $(NAME):$(OBJS)
 	@echo $(CENDTAG)
 	@echo $(GREENTAG)"Linking libft..."
 	@ar $(LDFLAGS) $@ $(OBJS)
 	@echo "Done."$(CENDTAG)
 
+#all rule
 all:	$(NAME)
-
+#defining order that and checking obj dir exists
+$(OBJS): | $(ODIR)
+#creating obj dir if not exist
+$(ODIR):
+	@mkdir -p $(ODIR)
+#clean rule
 clean:
 	@echo $(GREENTAG)"Cleaning libft..."
-	@rm -rf $(OBJS)
+	@rm -rf $(ODIR)
 	@echo "Done."$(CENDTAG)
+#full clean rule
 fclean: clean
+	@rm -rf $(NAME)
+	@echo $(GREENTAG)"Libft deleted."$(CENDTAG)
+#norminette rule
 norm:
 	@norminette $(SDIR)/$(SRCS)
 	@norminette $(IDIR)/*.h
-	@rm -rf $(NAME)
-	@echo $(GREENTAG)"Libft deleted."$(CENDTAG)
+#re rule
 re: clean all
-.PHONY: all clean fclean re
+#phony defend
+.PHONY: all clean fclean re norm
