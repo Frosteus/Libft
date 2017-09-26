@@ -16,8 +16,9 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 
-# define BUFF_SIZE 256
+# define BUFF_SIZE 512
 
 typedef struct s_list	t_list;
 typedef struct s_fd_lst	t_fd_lst;
@@ -106,7 +107,7 @@ void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-int	ft_binary_search(const int *arr, int arr_size, int key_val);
+int		ft_binary_search(const int *arr, int arr_size, int key_val);
 char	*ft_strrev(char *str);
 float	ft_sqrt(const float x);
 size_t	ft_str_word_ctr(char const *s, char c);

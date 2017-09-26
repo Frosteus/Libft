@@ -50,16 +50,20 @@ static int		ft_find_line(char **line, char *buff, t_fd_lst *lst, ssize_t rd)
 {
 	unsigned long	index;
 	char			*temp;
+	char			*npos;
+	char			*lst_buff;
 
 	temp = (*line);
-	if (ft_memchr(buff, '\n', (size_t)rd) != NULL)
+	if ((npos = ft_memchr(buff, '\n', (size_t)rd)) != NULL)
 	{
-		index = (char *)ft_memchr(buff, '\n', (size_t)rd) - buff;
+		index = npos - buff;
+		lst->len = rd - index - 1;
+		lst_buff = lst->res;
+		lst->res = ft_strsub(buff, (unsigned int)index + 1, (size_t)lst->len);
 		buff[index] = '\0';
 		(*line) = ft_strjoin(temp, buff);
+		free(lst_buff);
 		free(temp);
-		lst->len = rd - index - 1;
-		lst->res = ft_strsub(buff, (unsigned int)index + 1, (size_t)lst->len);
 		return (1);
 	}
 	(*line) = ft_strjoin(temp, buff);
@@ -91,6 +95,7 @@ int				ft_get_line(const int fd, char **line)
 		if (ft_find_line(line, buffer, lst, rd) == 1)
 			return (1);
 	}
+	free(lst->res);
 	lst->res = NULL;
 	return (ft_strlen((*line)) == 0 ? 0 : 1);
 }

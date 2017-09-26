@@ -6,7 +6,7 @@
 #    By: yskrypny <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/26 13:16:20 by yskrypny          #+#    #+#              #
-#    Updated: 2016/12/13 17:47:31 by yskrypny         ###   ########.fr        #
+#    Updated: 2017/09/25 10:04:38 by yskrypny         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -126,7 +126,7 @@ clean:
 	@echo $(GREENTAG)"Cleaning libft..."
 	@rm -rf $(ODIR)
 	@echo "Done."$(CENDTAG)
-#full clean rule
+#force clean rule
 fclean: clean
 	@rm -rf $(NAME)
 	@echo $(GREENTAG)"Libft deleted."$(CENDTAG)
